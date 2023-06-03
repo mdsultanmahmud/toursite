@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import OfferSlider from './components/OfferSlider'
 
 export default function Home() {
   return (
     <>
-      <h1>Thiss iss oouru nextx project</h1>
+      <OfferSlider/>
     </>
   )
 }
