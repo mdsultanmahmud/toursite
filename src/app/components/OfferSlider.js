@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
+import { Navigation } from "swiper";
 
 // import picture 
 import payInCash from '../../../public/intro-pay-cash.png'

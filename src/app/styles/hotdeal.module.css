@@ -1,0 +1,94 @@
+.serchingElement h1 {
+    color: rgb(28, 60, 107);
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.3rem;
+    letter-spacing: .14px;
+}
+
+.serchingElement button {
+    color: rgb(28, 60, 107);
+    font-weight: 400;
+    font-size: .9rem;
+    letter-spacing: .14px;
+    padding: 0 .5rem;
+
+}
+
+.serchingElement div {
+    background: white;
+    padding: .4rem 1rem;
+    border-radius: 8px;
+}
+
+.slider {
+    background: white;
+    position: relative;
+    margin-left: 1rem;
+    height: 187px;
+    border-radius: 1rem;
+}
+
+.slider .sliderImg {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    width: 160px;
+    height: 120px;
+    border-radius: 10px;
+}
+
+.slider div {
+    position: absolute;
+    left: 160px;
+    top: 1rem;
+}
+
+.slider h2 {
+    color: rgb(28, 60, 107);
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.slider p {
+    color: rgb(34, 41, 47);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+    letter-spacing: .14px;
+}
+
+
+.slider h3 {
+    position: absolute;
+    bottom: 2rem;
+    left: 1rem;
+    background-color: #ecf3fe;
+    padding: .5rem .8rem;
+    font-size: 14px;
+    color: rgb(28, 60, 107);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.slider h3  img{
+   width: 21px;
+   height: 26px;
+}
+
+.slider button {
+    position: absolute;
+    bottom: -1.2rem !important;
+    right: .8rem !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #fccd03;
+    padding:1rem;
+    border-radius: 10px;
+    font-size: 14px;
+    color: rgb(28, 60, 107);
+    font-weight: 500;
+}
