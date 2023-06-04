@@ -84,7 +84,7 @@
     color: rgb(28, 60, 107);
 }
 
-.tourContent select{
+.tourContent select, .tourContent input{
     width: 100%;
     margin-top: .2rem;
     color: rgb(28, 60, 107);
@@ -92,4 +92,41 @@
     font-weight: 700;
     outline: none;
     border: none;
+    cursor: pointer;
+}
+.hotelContent{
+    margin-bottom: 0 !important;
+}
+.hotelContent select span{
+    display: block;
+    margin-top: .5rem;
+    /* color: rgb(28, 60, 107); */
+    color: red;
+    font-size: 12px;
+    font-weight: 400;
+
+}
+
+.selectionContainer{
+    margin: 1rem 0 2rem 0;
+}
+.selectionContainer div{
+    display: flex;
+    align-items: center;
+}
+.selectionContainer input{
+    width: 17px;
+    height: 17px;
+    margin-right: .3rem;
+    cursor: pointer;
+}
+.selectionContainer h4{
+    color: rgb(28, 60, 107);
+    font-weight: 600;
+    font-size: 14px;
+}
+.selectionContainer label{
+    color: rgb(110,107,123);
+    font-weight: 400;
+    font-size: 14px;
 }
