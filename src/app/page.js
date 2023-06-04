@@ -6,6 +6,8 @@ import WhyGozayan from './components/WhyGozayan'
 import Banner from './components/Banner'
 import { useState } from 'react'
 import PopularHotel from './components/PopularHotel'
+import PopularDestination from './components/PopularDestination'
+import PopularTour from './components/PopularTour'
 
 export default function Home() {
   const [search, setSearch] = useState('flight')
@@ -16,6 +18,8 @@ export default function Home() {
       <HotDeals />
       <OfferSlider />
       <PopularHotel search = {search}/>
+      <PopularDestination search = {search}/>
+      <PopularTour search={search} />
     </>
   )
 }

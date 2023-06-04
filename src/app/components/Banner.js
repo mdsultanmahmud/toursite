@@ -6,9 +6,11 @@ import Image from 'next/image';
 import flight from '../../../public/flight-icon.svg'
 import hotel from '../../../public/hotel-icon.svg'
 import tour from '../../../public/tour-icon.svg'
+import SearchFlight from './SearchFlight';
+import SearchHotel from './SearchHotel';
+import SearchTour from './SearchTour';
 const Banner = ({ searchingProps }) => {
     const {search, setSearch} = searchingProps
-    console.log(search)
     return (
         <div className={`${styles.bannerContainer}`}>
             <div className={commonStyle.container}>
@@ -30,30 +32,12 @@ const Banner = ({ searchingProps }) => {
                             </div>
                         </div>
                     </div>
-                    {/* city filtering */}
-                    <div className={`${styles.filterPackage}`}>
-                        <div className={`${styles.filterItem}`}>
-                            <input type='radio' name='package' id='oneWay' />
-                            <label htmlFor='oneWay'>One way</label>
-                        </div>
-                        <div className={`${styles.filterItem}`}>
-                            <input type='radio' name='package' id='twoWay' />
-                            <label htmlFor='twoWay'>Two way</label>
-                        </div>
-                        <div className={`${styles.filterItem}`}>
-                            <input type='radio' name='package' id='multi' />
-                            <label htmlFor='multi'>Multi City</label>
-                        </div>
-                    </div>
-
-                    {/* main  content here */}
                     <div>
-                        <div>
-                            <h3>From</h3>
-                            <p>Dhaka</p>
-                            <p>habijaabbi....</p>
-                        </div>
+                        <SearchFlight search = {search}/>
+                        <SearchHotel search = {search}/>
+                        <SearchTour search = {search}/>
                     </div>
+                    
                     <button>Search</button>
                 </div>
             </div>
