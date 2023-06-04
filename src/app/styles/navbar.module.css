@@ -1,4 +1,12 @@
-
+.navContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    transition: all ease-in-out .2s;
+    z-index: 100;
+}
 .navContent {
     max-width: 1112px;
     margin: 0 auto;

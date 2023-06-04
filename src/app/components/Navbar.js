@@ -1,4 +1,4 @@
-
+'use client'
 import styles from '../styles/navbar.module.css'
 import logo from '../../../public/logo.svg'
 import flight from '../../../public/flight-icon.svg'
@@ -8,15 +8,33 @@ import bdt from '../../../public/bdt.svg'
 import Image from 'next/image';
 import { IoIosArrowDown } from 'react-icons/io'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 const Navbar = () => {
+    const [shownav, setShowNav] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY || window.pageYOffset;
+            if (scrollY >= 170) {
+                setShowNav(true)
+            } else {
+                setShowNav(false)
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
-        <div className={`${styles.navContainer} shadow-lg`}>
+        <div className={`${styles.navContainer} ${shownav ? 'shadow-lg bg-white':'bg-transparent'}`}>
             <nav className={`${styles.navContent}`}>
                 <div>
                     <Link href={"/"}><Image src={logo} alt='Logo of the website' width={130} height={40} /></Link>
                 </div>
-                <div className='flex items-center gap-12'>
+                <div className={`flex items-center gap-12 ${shownav ? 'block' : 'hidden'}`}>
                     <div className={styles.itemContainer}>
                         <Image src={flight} alt='icon of flight' width={30} height={20} />
                         <p>Flight</p>
