@@ -9,7 +9,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper";
-
+//linking style and image
 import commonStyle from '../styles/common.module.css'
 import styles from '../styles/hotdeal.module.css'
 import Image from "next/image";

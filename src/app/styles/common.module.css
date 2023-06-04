@@ -2,3 +2,11 @@
     width: 1112px;
     margin: 0 auto;
 }
+
+.title{
+    color: rgb(28, 60, 107);
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 1.3rem;
+    letter-spacing: .14px;
+}

@@ -18,9 +18,8 @@
     top: -2rem;
     left: 50%;
     transform: translateX(-50%);
-    padding: 1rem 4rem;
+    padding: 0 4rem;
 }
-
 .bannerContent button{
     position: absolute;
     bottom: -1.2rem !important;
@@ -36,7 +35,9 @@
 .itemContainer{
     display: flex;
     align-items: center;
-    gap: 8px;
+    column-gap: 8px;
+    padding: 1rem 0;
+    cursor: pointer;
 }
 .itemContainer p{
     font-size: 16px;
@@ -58,4 +59,8 @@
     font-weight: 600;
     color: rgb(28, 60, 107);
     margin-left: 10px;
+}
+
+.activeTab {
+    border-bottom: 1px solid #fccd03;
 }
