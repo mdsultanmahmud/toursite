@@ -21,7 +21,6 @@ import styles from '../styles/popular.module.css'
 import commonStyle from '../styles/common.module.css'
 
 const PopularHotel = ({search}) => {
-    console.log(search)
     // make data for popular hotel 
     const popularHotel = [
         {

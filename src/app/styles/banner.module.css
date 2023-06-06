@@ -73,7 +73,7 @@
     width: 100%;
     border: 1px solid gray;
     border-radius: .8rem;    
-    margin: 2rem 0;
+    /* margin: 2rem 0; */
 }
 .tourContent label {
     display: block;
@@ -94,6 +94,8 @@
     border: none;
     cursor: pointer;
 }
+
+/* tour search part design here  */
 .hotelContent{
     margin-bottom: 0 !important;
 }
@@ -129,4 +131,10 @@
     color: rgb(110,107,123);
     font-weight: 400;
     font-size: 14px;
+}
+
+
+/* flight search option in the banner section  */
+.flightContent hr{
+    transform: rotate(180deg);
 }

@@ -4,7 +4,7 @@ import styles from '../styles/banner.module.css'
 const SearchTour = ({ search }) => {
     return (
         <div className={`${search == 'tour' ? 'block' : 'hidden'}`}>
-            <div className={`${styles.tourContent}`}>
+            <div className={`${styles.tourContent} my-[2rem]`}>
                 <label htmlFor='tour'>Location/tour</label>
                 <select id='tour'>
                     <option defaultChecked>Cox Bazar</option>
