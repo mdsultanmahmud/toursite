@@ -1,15 +1,14 @@
 'use client'
 import React, { useState } from 'react';
-import commonStyle from '../styles/common.module.css'
 import styles from '../styles/banner.module.css'
 // import react icons 
 import { RxCross1 } from 'react-icons/rx'
+import Link from 'next/link';
 const SearchFlight = ({ search }) => {
     const [way, setWay] = useState("one")
 
     return (
         <div className={`${search == 'flight' ? 'block' : 'hidden'}`}>
-            <h1>Search here for the flight</h1>
             {/* city filtering */}
             <div className={`${styles.filterPackage}`}>
                 <div className={`${styles.filterItem}`}>
@@ -86,7 +85,7 @@ const SearchFlight = ({ search }) => {
             </div>
 
             {/* for multi way  */}
-            <div className={`grid gap-x-5 grid-cols-4 mb-[2rem] ${styles.flightContent}`}>
+            <div className={`grid gap-x-5 grid-cols-4 mb-[2rem] ${styles.flightContent} ${way == 'multi' ? 'block' : 'hidden'}`}>
                 <div className={`${styles.tourContent} ${styles.hotelContent}`}>
                     <label htmlFor='tour'>FROM</label>
                     <select id='tour'>
@@ -140,12 +139,13 @@ const SearchFlight = ({ search }) => {
                     </div>
                 </div>
                 <div className={`${styles.tourContent} ${styles.hotelContent} flex justify-between items-center`}>
-                    <p  className='text-[12px] text-[rgb(28,60,107)] font-bold cursor-pointer'>Add another city </p>
+                    <p className='text-[12px] text-[rgb(28,60,107)] font-bold cursor-pointer'>Add another city </p>
                     <RxCross1 className='cursor-pointer' />
 
                 </div>
             </div>
 
+           <Link href={"/flight"}> <button>Search</button></Link>
 
         </div >
     );

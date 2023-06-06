@@ -9,10 +9,13 @@ import tour from '../../../public/tour-icon.svg'
 import SearchFlight from './SearchFlight';
 import SearchHotel from './SearchHotel';
 import SearchTour from './SearchTour';
+import Link from 'next/link';
+import Navbar from './Navbar';
 const Banner = ({ searchingProps }) => {
-    const {search, setSearch} = searchingProps
+    const { search, setSearch } = searchingProps
     return (
         <div className={`${styles.bannerContainer}`}>
+            <Navbar isNavbar={true}/>
             <div className={commonStyle.container}>
                 <div className={`${styles.bannerContent} drop-shadow-2xl bg-white p-4 rounded-xl`}>
                     {/* category filtering  */}
@@ -33,12 +36,10 @@ const Banner = ({ searchingProps }) => {
                         </div>
                     </div>
                     <div>
-                        <SearchFlight search = {search}/>
-                        <SearchHotel search = {search}/>
-                        <SearchTour search = {search}/>
+                        <SearchFlight search={search} />
+                        <SearchHotel search={search} />
+                        <SearchTour search={search} />
                     </div>
-                    
-                    <button>Search</button>
                 </div>
             </div>
         </div>

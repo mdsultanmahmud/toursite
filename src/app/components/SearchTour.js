@@ -18,6 +18,7 @@ const SearchTour = ({ search }) => {
                     <option>Tanguar Haor</option>
                 </select>
             </div>
+            <button>Search</button>
         </div>
     );
 };

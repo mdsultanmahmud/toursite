@@ -9,7 +9,8 @@ import Image from 'next/image';
 import { IoIosArrowDown } from 'react-icons/io'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-const Navbar = () => {
+const Navbar = ({isNavbar}) => {
+    console.log(isNavbar)
     const [shownav, setShowNav] = useState(false)
     useEffect(() => {
         const handleScroll = () => {
@@ -29,12 +30,12 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`${styles.navContainer} ${shownav ? 'shadow-lg bg-white':'bg-transparent'}`}>
+        <div className={`${styles.navContainer} ${shownav || !isNavbar ? 'shadow-lg bg-white':'bg-transparent'}`}>
             <nav className={`${styles.navContent}`}>
                 <div>
                     <Link href={"/"}><Image src={logo} alt='Logo of the website' width={130} height={40} /></Link>
                 </div>
-                <div className={`flex items-center gap-12 ${shownav ? 'block' : 'hidden'}`}>
+                <div className={`flex items-center gap-12 ${shownav || !isNavbar ? 'block' : 'hidden'}`}>
                     <div className={styles.itemContainer}>
                         <Image src={flight} alt='icon of flight' width={30} height={20} />
                         <p>Flight</p>

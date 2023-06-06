@@ -4,7 +4,7 @@ import styles from '../styles/banner.module.css'
 const SearchHotel = ({ search }) => {
     return (
         <div className={`${search == 'hotel' ? 'block' : 'hidden'}`}>
-            <div className={`grid gap-x-5 grid-cols-4`}>
+            <div className={`grid gap-x-5 grid-cols-4 mt-[2rem]`}>
                 <div className={`${styles.tourContent} ${styles.hotelContent}`}>
                     <label htmlFor='tour'>CITY/HOTEL/RESORT/AREA</label>
                     <select id='tour'>
@@ -59,6 +59,7 @@ const SearchHotel = ({ search }) => {
                     <label htmlFor='Solo'>Solo</label>
                 </div>
             </div>
+            <button>Search</button>
         </div>
     );
 };

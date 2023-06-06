@@ -133,8 +133,3 @@
     font-size: 14px;
 }
 
-
-/* flight search option in the banner section  */
-.flightContent hr{
-    transform: rotate(180deg);
-}
