@@ -44,23 +44,75 @@ const Flight = () => {
                 }
             }
 
+        },
+        {
+            name: "Biman Bangladesh Airlines",
+            dac: '15:15',
+            cxb: '16.30',
+            type: 'Non-stop',
+            timeDuration: '1h 15m',
+            numberPlat: 'EDOM0623',
+            prevPrice: 4499,
+            currentPrice: 4009,
+            img: BBA,
+            details: {
+                fullname: "Biman Bangladesh Airlines BG 437 | DH8",
+                flightClass: "Economy",
+                arivalTime: 'Mon, 12 Jun, 2023',
+                leaveTime: 'Mon, 12 Jun, 2023',
+                Baggage: {
+                    Flight: 'DAC - CXB',
+                    Cabin: "7 Kilograms",
+                    CheckIn: "20 Kilograms",
+                },
+                Fare: {
+                    FareSummary: "Adult x 1",
+                    BaseFare: "BDT 3,774",
+                    Tax: 'BDT 725'
+                },
+                Policy: {
+                    Cancellation: "Cancellation Fee = Airline's Fee + GoZayaan Fee Refund Amount = Paid Amount - Cancellation Fee",
+                    ReIssue: "Re-issue Fee = Airline's Fee + Fare Difference + GoZayaan Fee",
+                    statment: "*The airline's fee is indicative and per person. Convenience fee is non-refundable."
+                }
+            }
+
+        },
+        {
+            name: "Biman Bangladesh Airlines",
+            dac: '15:15',
+            cxb: '16.30',
+            type: 'Non-stop',
+            timeDuration: '1h 15m',
+            numberPlat: 'EDOM0623',
+            prevPrice: 4499,
+            currentPrice: 4009,
+            img: BBA,
+            details: {
+                fullname: "Biman Bangladesh Airlines BG 437 | DH8",
+                flightClass: "Economy",
+                arivalTime: 'Mon, 12 Jun, 2023',
+                leaveTime: 'Mon, 12 Jun, 2023',
+                Baggage: {
+                    Flight: 'DAC - CXB',
+                    Cabin: "7 Kilograms",
+                    CheckIn: "20 Kilograms",
+                },
+                Fare: {
+                    FareSummary: "Adult x 1",
+                    BaseFare: "BDT 3,774",
+                    Tax: 'BDT 725'
+                },
+                Policy: {
+                    Cancellation: "Cancellation Fee = Airline's Fee + GoZayaan Fee Refund Amount = Paid Amount - Cancellation Fee",
+                    ReIssue: "Re-issue Fee = Airline's Fee + Fare Difference + GoZayaan Fee",
+                    statment: "*The airline's fee is indicative and per person. Convenience fee is non-refundable."
+                }
+            }
+
         }
     ]
 
-    const items = [
-        {
-          title: 'Section 1',
-          content: 'Content of section 1',
-        },
-        {
-          title: 'Section 2',
-          content: 'Content of section 2',
-        },
-        {
-          title: 'Section 3',
-          content: 'Content of section 3',
-        },
-      ];
     return (
         <div>
             <Navbar isNavbar={false} />
@@ -159,8 +211,7 @@ const Flight = () => {
                     </div>
                     {/* show data here  */}
                     <div className="container mx-auto p-4">
-                        <h1 className="text-2xl font-bold mb-4">Accordion Example</h1>
-                        <FlightCard items={items} />
+                        <FlightCard allFlight={allFlight} />
                     </div>
 
                 </div>
