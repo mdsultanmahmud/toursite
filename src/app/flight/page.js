@@ -25,8 +25,8 @@ const Flight = () => {
             details: {
                 fullname: "Biman Bangladesh Airlines BG 437 | DH8",
                 flightClass: "Economy",
-                arivalTime: 'Mon, 12 Jun, 2023',
-                leaveTime: 'Mon, 12 Jun, 2023',
+                arivalTime: 'Mon, 12 Jun, \n 2023',
+                leaveTime: 'Mon, 12 Jun, \n 2023',
                 Baggage: {
                     Flight: 'DAC - CXB',
                     Cabin: "7 Kilograms",
@@ -221,7 +221,7 @@ const Flight = () => {
                         <p className='text-[24px] font-bold text-[#1c3c6b]'>18: 50</p>
                     </div>
                     {/* need help section  */}
-                    <div className="bg-white shadow-lg rounded-lg">
+                    <div className="bg-white shadow-lg rounded-t-lg">
                         <h3 className='bg-[#0b74a7] p-3 text-white font-bold text-[16px] rounded-t-lg'>Need Help ?</h3>
                         <div className='flex p-2 gap-x-4 items-center my-4 rounded'>
                             <span className='bg-[#fccd03] p-2 rounded-full'>
