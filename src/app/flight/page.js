@@ -9,6 +9,7 @@ import { RiMessengerLine } from 'react-icons/ri'
 //card image importing
 import BBA from '../../../public/flight/bba.png'
 import FlightCard from '../components/FlightCard';
+import FlightFilter from '../components/FlightFilter';
 const Flight = () => {
     const [way, setWay] = useState("one")
     const allFlight = [
@@ -38,7 +39,7 @@ const Flight = () => {
                     Tax: 'BDT 725'
                 },
                 Policy: {
-                    Cancellation: "Cancellation Fee = Airline's Fee + GoZayaan Fee Refund Amount = Paid Amount - Cancellation Fee",
+                    Cancellation: "Cancellation Fee = Airline's Fee + GoZayaan Fee  Refund Amount = Paid Amount - Cancellation Fee",
                     ReIssue: "Re-issue Fee = Airline's Fee + Fare Difference + GoZayaan Fee",
                     statment: "*The airline's fee is indicative and per person. Convenience fee is non-refundable."
                 }
@@ -116,7 +117,7 @@ const Flight = () => {
     return (
         <div>
             <Navbar isNavbar={false} />
-            <div className={`bg-white mb-8`}>
+            <div className={`bg-white py-6`}>
                 <div className={`${styles.flightContainer}`}>
                     {/* city filtering */}
                     <div className={`${bannerStyling.filterPackage} `}>
@@ -195,6 +196,9 @@ const Flight = () => {
                     </div>
                 </div>
             </div>
+            <div className={`mt-8 bg-white max-w-[1112px] mx-auto py-4 rounded shadow-lg`}>
+                <FlightFilter/>
+            </div>
             <div className={`flex gap-x-8 ${styles.flightContainer}`}>
                 <div className='w-full'>
                     <div className='flex justify-between items-center bg-white py-4 px-8 rounded shadow-lg'>
@@ -210,7 +214,7 @@ const Flight = () => {
                         </div>
                     </div>
                     {/* show data here  */}
-                    <div className="container mx-auto p-4">
+                    <div className="container mx-auto">
                         <FlightCard allFlight={allFlight} />
                     </div>
 

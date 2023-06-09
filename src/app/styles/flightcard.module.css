@@ -28,3 +28,86 @@
     box-sizing: border-box;
 
 } */
+
+.detailsContainer h2{
+    color: rgb(93, 105, 116);
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.detailsContainer .active{
+    color: rgb(28, 60, 107);
+    font-weight: 600;
+}
+
+.detailsContainer h3{
+    color: rgb(114, 141, 182);
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.detailsContainer p{
+    color: rgb(28, 60, 107);
+    font-size: 14px;
+    font-weight: 400;
+}
+.detailsContainer h4{
+    color: rgb(28, 60, 107);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.policyContent h5{
+    color: rgb(114, 141, 182);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: .5rem 0;
+}
+.policyContent p{
+    color: rgb(28, 60, 107);
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: .3rem;
+    margin: .5rem 0;
+}
+
+
+/* design flight filter section  */
+.filterContainer li{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(78, 81, 84);
+    cursor: pointer;
+}
+
+.dropdown{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    transition: all ease-in-out .2s;
+}
+
+.active {
+    max-height: 600px;
+}
+
+.dropdown h2{
+    color: rgb(28, 60, 107);
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: .5rem;
+}
+.formControl {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.formControl label{
+    color: rgb(110, 107, 123);
+    font-weight: 400;
+    font-size: 14px;
+}
