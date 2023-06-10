@@ -6,9 +6,61 @@ import commonStyles from '../styles/common.module.css'
 import { AiTwotoneStar } from 'react-icons/ai'
 import { BsSearch } from 'react-icons/bs'
 import { RxCrossCircled } from 'react-icons/rx'
-import {IoIosArrowForward} from 'react-icons/io'
-
+import { IoIosArrowForward } from 'react-icons/io'
+import HotelCard from '../components/HotelCard';
+import hotelOne from '../../../public/popularHotel/hotelOne.jpg'
+import hotelTwo from '../../../public/popularHotel/hotelTwo.jpg'
 const Hotel = () => {
+    const hotels = [
+        {
+            name: 'Ocean Paradise Hotel & Resort',
+            star: 5,
+            location: "Kalatoli, Cox's Bazar",
+            prevRate: 7906,
+            currentRate: 3985,
+            f1: " Air Conditioning",
+            f2: " Accessible Bathroom",
+            f3: "In-room Accessibility",
+            discount: 49,
+            img: hotelOne
+        },
+        {
+            name: 'Seagull Hotels Ltd.',
+            star: 5,
+            location: "Beach road, Cox's Bazar",
+            prevRate: 7510,
+            currentRate: 4205,
+            f1: "Air Conditioning",
+            f2: " Disability Friendly",
+            f3: "Couple Friendly",
+            discount: 43,
+            img: hotelTwo
+        },
+        {
+            name: 'Ocean Paradise Hotel & Resort',
+            star: 5,
+            location: "Kalatoli, Cox's Bazar",
+            prevRate: 7906,
+            currentRate: 3985,
+            f1: " Air Conditioning",
+            f2: " Accessible Bathroom",
+            f3: "In-room Accessibility",
+            discount: 49,
+            img: hotelOne
+        },
+        {
+            name: 'Seagull Hotels Ltd.',
+            star: 5,
+            location: "Beach road, Cox's Bazar",
+            prevRate: 7510,
+            currentRate: 4205,
+            f1: "Air Conditioning",
+            f2: " Disability Friendly",
+            f3: "Couple Friendly",
+            discount: 43,
+            img: hotelTwo
+        },
+    ]
     return (
         <div>
             <Navbar isNavbar={false} />
@@ -95,10 +147,10 @@ const Hotel = () => {
                     <div className={`mt-6 mb-10`}>
                         <h3>Price Range</h3>
                         <div className={`${styles.priceRangeCon}`}>
-                            <input type='number'/>
+                            <input type='number' />
                             <span>to</span>
-                            <input type='number'/>
-                            <button><IoIosArrowForward size={22}/></button>
+                            <input type='number' />
+                            <button><IoIosArrowForward size={22} /></button>
                         </div>
                     </div>
                     <hr />
@@ -326,8 +378,19 @@ const Hotel = () => {
                         </div>
                     </div>
                 </div>
-                <div className={`${styles.hotelSearchCon}`}>
-                    <p>product section</p>
+                <div className={`${styles.hotelSearchCon} ${commonStyles.container}`}>
+                    <div className={`flex justify-between items-center`}>
+                        <h2 className='text-[16px] font-bold'>43 properties found</h2>
+                        <select className='px-6 py-2 outline-none bg-whtie rouned'>
+                            <option defaultChecked value={'pop'}>Popularity</option>
+                            <option value={'price'}>Price</option>
+                        </select>
+                    </div>
+                    <div className='my-4'>
+                        {
+                            hotels.map((hotel, index) => <HotelCard key={index} hotel = {hotel}/>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>
