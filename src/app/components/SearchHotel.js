@@ -1,6 +1,7 @@
 import React from 'react';
 import commonStyle from '../styles/common.module.css'
 import styles from '../styles/banner.module.css'
+import Link from 'next/link';
 const SearchHotel = ({ search }) => {
     return (
         <div className={`${search == 'hotel' ? 'block' : 'hidden'}`}>
@@ -59,7 +60,7 @@ const SearchHotel = ({ search }) => {
                     <label htmlFor='Solo'>Solo</label>
                 </div>
             </div>
-            <button>Search</button>
+            <Link href={"/hotel"}> <button>Search</button></Link>
         </div>
     );
 };

@@ -1,0 +1,98 @@
+.hotelFilterCon {
+    width: 266px;
+    background-color: white;
+    padding: .5rem .8rem;
+}
+
+.hotelSearchCon {
+    width: calc(100% - 266px);
+}
+
+.filterOption h2 {
+    color: rgb(58, 72, 86);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .14pxl
+}
+
+.filterOption button {
+    color: rgb(23, 49, 87);
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.hotelFilterCon h3 {
+    color: rgb(2, 39, 56);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: .7rem;
+    letter-spacing: .14px;
+}
+
+.formControl {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.formControl label {
+    color: rgb(2, 39, 56);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: .14px;
+}
+
+/* ratings container  */
+.ratingCon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.ratingCon p {
+    padding: .2rem .4rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.propertyCon {
+    border: 1px solid #1c3c6b;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.propertyCon input {
+    width: 100%;
+    font-size: 14px;
+    outline: none;
+    border: none;
+    padding: 0 .4rem;
+}
+
+.priceRangeCon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 4px;
+}
+
+.priceRangeCon input {
+    width: 40%;
+    padding: .6rem .8rem;
+    border: 1px solid #1c3c6b;
+    border-radius: 8px;
+    outline: none;
+}
+
+.priceRangeCon button {
+    padding:.8rem;
+    background-color: #1c3c6b;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+}
+
