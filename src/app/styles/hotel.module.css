@@ -2,6 +2,7 @@
     width: 266px;
     background-color: white;
     padding: .5rem .8rem;
+    height: 100%;
 }
 
 .hotelSearchCon {
@@ -12,7 +13,13 @@
     color: rgb(58, 72, 86);
     font-size: 18px;
     font-weight: 700;
-    letter-spacing: .14pxl
+    letter-spacing: .14px;
+}
+.hotelSearchCon .filterOption h3 {
+    color: rgb(58, 72, 86);
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .14px;
 }
 
 .filterOption button {

@@ -337,11 +337,11 @@ const Hotel = () => {
                             </div>
                             <div className={`${styles.formControl}`}>
                                 <input type='checkbox' id='air' />
-                                <label htmlFor='air'>Cox's Bazar</label>
+                                <label htmlFor='air'>Cox`&apos;`s Bazar</label>
                             </div>
                             <div className={`${styles.formControl}`}>
                                 <input type='checkbox' id='air' />
-                                <label htmlFor='air'>Cox's Bazar Sadar</label>
+                                <label htmlFor='air'>Cox`&apos;`s Bazar Sadar</label>
                             </div>
                             <div className={`${styles.formControl}`}>
                                 <input type='checkbox' id='air' />

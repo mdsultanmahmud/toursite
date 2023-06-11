@@ -1,6 +1,7 @@
 import React from 'react';
 import commonStyle from '../styles/common.module.css'
 import styles from '../styles/banner.module.css'
+import Link from 'next/link';
 const SearchTour = ({ search }) => {
     return (
         <div className={`${search == 'tour' ? 'block' : 'hidden'}`}>
@@ -18,7 +19,7 @@ const SearchTour = ({ search }) => {
                     <option>Tanguar Haor</option>
                 </select>
             </div>
-            <button>Search</button>
+            <Link href={"/tour"}><button>Search</button></Link>
         </div>
     );
 };
