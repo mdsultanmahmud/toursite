@@ -10,9 +10,11 @@ import { IoIosArrowForward } from 'react-icons/io'
 import HotelCard from '../components/HotelCard';
 import hotelOne from '../../../public/popularHotel/hotelOne.jpg'
 import hotelTwo from '../../../public/popularHotel/hotelTwo.jpg'
+import { v4 as uuidv4 } from 'uuid';
 const Hotel = () => {
     const hotels = [
         {
+            id: uuidv4(),
             name: 'Ocean Paradise Hotel & Resort',
             star: 5,
             location: "Kalatoli, Cox's Bazar",
@@ -25,6 +27,7 @@ const Hotel = () => {
             img: hotelOne
         },
         {
+            id: uuidv4(),
             name: 'Seagull Hotels Ltd.',
             star: 5,
             location: "Beach road, Cox's Bazar",
@@ -37,6 +40,7 @@ const Hotel = () => {
             img: hotelTwo
         },
         {
+            id: uuidv4(),
             name: 'Ocean Paradise Hotel & Resort',
             star: 5,
             location: "Kalatoli, Cox's Bazar",
@@ -49,6 +53,7 @@ const Hotel = () => {
             img: hotelOne
         },
         {
+            id: uuidv4(),
             name: 'Seagull Hotels Ltd.',
             star: 5,
             location: "Beach road, Cox's Bazar",

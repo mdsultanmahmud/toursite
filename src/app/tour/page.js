@@ -17,9 +17,11 @@ import sightness from '../../../public/tour/sightness.svg'
 import dayout from '../../../public/tour/dayout.svg'
 import adventure from '../../../public/tour/adventure.svg'
 import TourCard from '../components/TourCard';
+import { v4 as uuidv4 } from 'uuid';
 const Tour = () => {
     const places = [
         {
+            id: uuidv4(),
             name: 'Aquaholic Tourist Caravan',
             location: "Cox's Bazar",
             prevRate: 2099,
@@ -34,6 +36,7 @@ const Tour = () => {
             option3: "Marine drive",
         },
         {
+            id: uuidv4(),
             name: 'Parasailing at FunFest Beach',
             location: " Kakra Beach, Marine Drive, Cox's Bazar",
             prevRate: 1840,
@@ -48,6 +51,7 @@ const Tour = () => {
             option3: "Marine drive",
         },
         {
+            id: uuidv4(),
             name: 'Aquaholic Tourist Caravan',
             location: "Cox's Bazar",
             prevRate: 2099,
@@ -62,6 +66,7 @@ const Tour = () => {
             option3: "Marine drive",
         },
         {
+            id: uuidv4(),
             name: 'Parasailing at FunFest Beach',
             location: " Kakra Beach, Marine Drive, Cox's Bazar",
             prevRate: 1840,
@@ -76,6 +81,7 @@ const Tour = () => {
             option3: "Marine drive",
         },
         {
+            id: uuidv4(),
             name: 'Aquaholic Tourist Caravan',
             location: "Cox's Bazar",
             prevRate: 2099,
@@ -90,6 +96,7 @@ const Tour = () => {
             option3: "Marine drive",
         },
         {
+            id: uuidv4(),
             name: 'Parasailing at FunFest Beach',
             location: " Kakra Beach, Marine Drive, Cox's Bazar",
             prevRate: 1840,

@@ -1,0 +1,11 @@
+.tourDetailsContent{
+    margin: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out .2s;
+}
+
+ .active {
+    max-height: 100%;
+
+}
