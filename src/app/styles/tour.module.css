@@ -1,11 +1,93 @@
+.img-container{
+    width: calc(100% - 350px);
+}
+
 .tourDetailsContent{
-    margin: 1rem;
+    margin: 1.2rem;
     max-height: 0;
     overflow: hidden;
     transition: all ease-in-out .2s;
+    /* padding: 1rem; */
 }
+.tourDetailsContent ul {
+    padding: .5rem 2rem;
 
+}
  .active {
     max-height: 100%;
 
+}
+
+.tourDetailsContent p,.tourDetailsContent li{
+    font-size: 14px;
+    color: rgb(93, 105, 116);
+    font-weight: 400;
+    letter-spacing: 0.14px;
+} 
+
+.selectOption label{
+    margin-bottom: .3rem;
+    font-size: 14px;
+    color: rgb(110, 107, 123);
+}
+.selectOption input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: rgb(28, 60, 107);
+    width: 100%;
+}
+.selectOption h2{
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(28, 60, 107);
+}
+.selectOption button:disabled{
+    color: gray;
+}
+
+.details{
+    margin: 1rem;
+    text-align: center;
+}
+.details h5, .details del{
+    color: rgb(75, 88, 101);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .14px;
+}
+.details h4{
+    color: rgb(28, 60, 107);
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .14px;
+    text-transform: uppercase;
+    margin: .2rem 0;
+}
+.details p{
+    color: rgb(55, 88, 101);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .14px;
+}
+
+.details button{
+    width: 100%;
+    font-size: 18px;
+    font-weight: 400;
+    padding: .4rem 1rem;
+    background-color: #fccd03;
+    color: black;
+    margin-top: 1rem;
+    border-radius: .7rem;
+}
+
+.details ul li  {
+    outline: none;
+}
+.details ul li:hover{
+    background-color: white;
+}
+.details ul li:focus{
+    background-color: white;
 }
