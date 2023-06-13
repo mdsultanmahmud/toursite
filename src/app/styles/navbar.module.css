@@ -26,9 +26,16 @@
     border-radius: .358rem;
     display: inline-block;
 }   
+.itemContainer{
+    cursor: pointer;
+}
 .itemContainer p{
     color: rgb(28, 60, 107);
     font-weight: 600;
     font-size: 14px;
-    
+}
+
+.activeTab {
+    border-bottom: 1px solid #fccd03;
+    border-width: 120%;
 }

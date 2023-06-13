@@ -68,7 +68,7 @@ const Hotel = () => {
     ]
     return (
         <div>
-            <Navbar isNavbar={false} />
+            <Navbar prop={{isNavbar: false}} />
             <div className='bg-white py-6 mt-16'>
                 <div className={` ${commonStyles.container}`}>
                     <div className={`grid gap-x-5 grid-cols-5 mt-[2rem]`}>

@@ -68,7 +68,7 @@ const TourDetails = ({ params }) => {
 
     return (
         <div>
-            <Navbar isNavbar={false} />
+            <Navbar prop={{isNavbar: false}} />
             <div className={`${commonStyles.container}`}>
                 <Link href="/tour" className='mb-2 pt-[90px] font-semibold text-[16px] text-[#1c3c6b] flex items-center gap-x-2'><IoIosArrowBack /> <span>See all tour</span></Link>
                 {/* img and primary details  */}

@@ -9,9 +9,9 @@ import Image from 'next/image';
 import { IoIosArrowDown } from 'react-icons/io'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-const Navbar = ({isNavbar}) => {
-    console.log(isNavbar)
+const Navbar = ({ prop }) => {
     const [shownav, setShowNav] = useState(false)
+    const { search, setSearch, isNavbar } = prop
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY || window.pageYOffset;
@@ -30,24 +30,30 @@ const Navbar = ({isNavbar}) => {
     }, []);
 
     return (
-        <div className={`${styles.navContainer} ${shownav || !isNavbar ? 'shadow-lg bg-white':'bg-transparent'}`}>
+        <div className={`${styles.navContainer} ${shownav || !isNavbar ? 'shadow-lg bg-white' : 'bg-transparent'}`}>
             <nav className={`${styles.navContent}`}>
                 <div>
                     <Link href={"/"}><Image src={logo} alt='Logo of the website' width={130} height={40} /></Link>
                 </div>
                 <div className={`flex items-center gap-12 ${shownav || !isNavbar ? 'block' : 'hidden'}`}>
-                    <div className={styles.itemContainer}>
-                        <Image src={flight} alt='icon of flight' width={30} height={20} />
-                        <p>Flight</p>
-                    </div>
-                    <div className={styles.itemContainer}>
-                        <Image src={hotel} alt='icon of flight' width={30} height={20} />
-                        <p>Hotel</p>
-                    </div>
-                    <div className={styles.itemContainer}>
-                        <Image src={tour} alt='icon of flight' width={30} height={20} />
-                        <p>Tour</p>
-                    </div>
+                    <Link href={'/'}>
+                        <div onClick={() => setSearch("flight")} className={`${styles.itemContainer} ${search == 'flight' ? styles.activeTab : ''}`}>
+                            <Image src={flight} alt='icon of flight' width={30} height={20} />
+                            <p>Flight</p>
+                        </div>
+                    </Link>
+                    <Link href={'/'}>
+                        <div onClick={() => setSearch("hotel")} className={`${styles.itemContainer} ${search == 'hotel' ? styles.activeTab : ''}`}>
+                            <Image src={hotel} alt='icon of flight' width={30} height={20} />
+                            <p>Hotel</p>
+                        </div>
+                    </Link>
+                    <Link href={'/'}>
+                        <div onClick={() => setSearch("tour")} className={`${styles.itemContainer} ${search == 'tour' ? styles.activeTab : ''}`}>
+                            <Image src={tour} alt='icon of flight' width={30} height={20} />
+                            <p>Tour</p>
+                        </div>
+                    </Link>
                 </div>
                 <div className='flex items-center gap-3'>
                     <div class="dropdown dropdown-end">

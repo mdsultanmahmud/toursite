@@ -15,7 +15,7 @@ const Banner = ({ searchingProps }) => {
     const { search, setSearch } = searchingProps
     return (
         <div className={`${styles.bannerContainer}`}>
-            <Navbar isNavbar={true}/>
+            <Navbar prop = {{search, setSearch, isNavbar: true}}/>
             <div className={commonStyle.container}>
                 <div className={`${styles.bannerContent} drop-shadow-2xl bg-white p-4 rounded-xl`}>
                     {/* category filtering  */}
