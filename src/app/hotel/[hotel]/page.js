@@ -22,6 +22,7 @@ import { FcCheckmark } from 'react-icons/fc'
 import Image from 'next/image';
 import mastercard from '../../../../public/master.svg'
 import visa from '../../../../public/visa.svg'
+import RoomDetails from '@/app/components/RoomDetails';
 
 
 const HotelDetails = ({ params }) => {
@@ -47,7 +48,186 @@ const HotelDetails = ({ params }) => {
             { id: 8, img: h8 },
         ],
         description: "Featuring a 24-hour front desk and free Wi-Fi in lobby area, Royal Bay Regal Palace Hotel & Resort also offers a fitness center on property. Guests can approach the tour desk for travel related assistance or avail of car rental facilities to explore the area. For those who have to work on the go, there is a business center on property. Each air-conditioned room features a seating area, a flat-screen TV with satellite channels, an electric kettle and telephone. The attached bathroom has shower facilities. Room service options can be enjoyed 24-hours a day. Spicy Restaurant serves cuisines from around the region and the world. BBQ is a multi-cuisine restaurant which also offers sea-views. Bar/Lounge is the resident coffee shop and juice bar. The property is 1.9 mi from Cox’s Bazar Airport. The local bus stand is just 0.6 mi away. Cox’s Bazar Sandy Sea Beach and Laboni Beach Market are just 984 feet away. The Burmese Market is 1.9 mi away.",
+        roomDetails: [
+            {
+                name: "Deluxe Couple AC",
+                type: " Double",
+                person: " 2 Adults , 1 Child",
+                adult: 2,
+                child: 1,
+                capacity: 2,
+                extraBed: 0,
+                guest: 2,
+                isSmoke: "Non-Smoking Room",
+                Characteristics: "Deluxe",
+                size: "none",
+                view: "none",
+                discount: 44,
+                prevRate: 7906,
+                currentRate: 3985,
+                media: [
+                    {
+                        fs: "Cable TV"
+                    },
+                    {
+                        fs: "Telephone"
+                    },
+                    {
+                        fs: "Wi-Fi"
+                    }
+                ],
+                bedroom: [
+                    { fs: "In-Room Safe" },
+                    { fs: "Fan" },
+                    { fs: "Balcony" },
+                    { fs: "Air Conditioning" },
+                    { fs: "Blankets" },
+                ],
+                bathroom: [
+                    { fs: "Toiletries" },
+                    { fs: "Towels" },
+                    { fs: "Hot Water" },
+                    { fs: "Bathroom" }
+                ],
+                food: [
+                    { fs: "Free Bottled Water" }
+                ],
+                others: [
+                    { fs: "Disability-friendly Bathroom" },
+                    { fs: "Housekeeping" },
+                    { fs: "Room Service" }
+                ],
+                images: [
+                    { id: 1, img: h1 },
+                    { id: 2, img: h2 },
+                    { id: 3, img: h3 },
+                    { id: 4, img: h4 },
+                    { id: 5, img: h5 },
+                    { id: 6, img: h6 },
+                    { id: 7, img: h7 },
+                    { id: 8, img: h8 },
+                ],
+            },
+            {
+                name: "Deluxe Couple AC",
+                type: " Double",
+                person: " 2 Adults , 1 Child",
+                adult: 2,
+                child: 1,
+                capacity: 2,
+                extraBed: 0,
+                guest: 2,
+                isSmoke: "Non-Smoking Room",
+                Characteristics: "Deluxe",
+                size: "none",
+                view: "none",
+                discount: 44,
+                prevRate: 7906,
+                currentRate: 3985,
+                media: [
+                    {
+                        fs: "Cable TV"
+                    },
+                    {
+                        fs: "Telephone"
+                    },
+                    {
+                        fs: "Wi-Fi"
+                    }
+                ],
+                bedroom: [
+                    { fs: "In-Room Safe" },
+                    { fs: "Fan" },
+                    { fs: "Balcony" },
+                    { fs: "Air Conditioning" },
+                    { fs: "Blankets" },
+                ],
+                bathroom: [
+                    { fs: "Toiletries" },
+                    { fs: "Towels" },
+                    { fs: "Hot Water" },
+                    { fs: "Bathroom" }
+                ],
+                food: [
+                    { fs: "Free Bottled Water" }
+                ],
+                others: [
+                    { fs: "Disability-friendly Bathroom" },
+                    { fs: "Housekeeping" },
+                    { fs: "Room Service" }
+                ],
+                images: [
+                    { id: 1, img: h1 },
+                    { id: 2, img: h2 },
+                    { id: 3, img: h3 },
+                    { id: 4, img: h4 },
+                    { id: 5, img: h5 },
+                    { id: 6, img: h6 },
+                    { id: 7, img: h7 },
+                    { id: 8, img: h8 },
+                ],
+            },
+            {
+                name: "Deluxe Couple AC",
+                type: " Double",
+                person: " 2 Adults , 1 Child",
+                adult: 2,
+                child: 1,
+                capacity: 2,
+                extraBed: 0,
+                guest: 2,
+                isSmoke: "Non-Smoking Room",
+                Characteristics: "Deluxe",
+                size: "none",
+                view: "none",
+                discount: 44,
+                prevRate: 7906,
+                currentRate: 3985,
 
+                media: [
+                    {
+                        fs: "Cable TV"
+                    },
+                    {
+                        fs: "Telephone"
+                    },
+                    {
+                        fs: "Wi-Fi"
+                    }
+                ],
+                bedroom: [
+                    { fs: "In-Room Safe" },
+                    { fs: "Fan" },
+                    { fs: "Balcony" },
+                    { fs: "Air Conditioning" },
+                    { fs: "Blankets" },
+                ],
+                bathroom: [
+                    { fs: "Toiletries" },
+                    { fs: "Towels" },
+                    { fs: "Hot Water" },
+                    { fs: "Bathroom" }
+                ],
+                food: [
+                    { fs: "Free Bottled Water" }
+                ],
+                others: [
+                    { fs: "Disability-friendly Bathroom" },
+                    { fs: "Housekeeping" },
+                    { fs: "Room Service" }
+                ],
+                images: [
+                    { id: 1, img: h1 },
+                    { id: 2, img: h2 },
+                    { id: 3, img: h3 },
+                    { id: 4, img: h4 },
+                    { id: 5, img: h5 },
+                    { id: 6, img: h6 },
+                    { id: 7, img: h7 },
+                    { id: 8, img: h8 },
+                ],
+            }
+        ]
     }
     return (
         <div>
@@ -113,11 +293,23 @@ const HotelDetails = ({ params }) => {
                         <p>here check inbox</p>
                     </div>
                     <div className='flex gap-x-12 mt-4'>
-                        <div>
-                            <p>here all hotels showing</p>
+                        <div >
+                            <div className='flex justify-between items-center bg-[#ecf3fe] rounded-t-lg p-4'>
+                                <h2>Room Details</h2>
+                                <div>
+                                    <h2>For 2 Adults, for 1 Night</h2>
+                                </div>
+                            </div>
+                            <div>
+                                {
+                                    hotels.roomDetails.map((room, index) => <RoomDetails room={room} key={index} />)
+                                }
+                            </div>
                         </div>
-                        <div className={`min-w-[300px] p-4 bg-white drop-shadow-2xl rounded-lg  h-[100%] sticky top-[80px]`}>
-                            <p>here the card will be shown</p>
+                        <div className={`min-w-[300px] bg-[#ecf3fe] drop-shadow-2xl rounded-lg  h-[338px] sticky top-[90px]`}>
+                                <h3 className='p-4 bg-[#1c3c6b] text-white font-bold text-[14px] rounded-t-lg'>Summary Pricing</h3>
+                                <p className='text-center mt-8'>Add Rooms to Continue</p>
+                                <button className='px-6 py-2 font-semibold mt-3 rounded-xl text-black text-[12px] bg-[#fccd03] block mx-auto mt-8'>Continue</button>
                         </div>
                     </div>
                     <h2 className='mt-6'>What`&apos;`s Nearby</h2>
