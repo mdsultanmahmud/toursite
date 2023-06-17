@@ -7,6 +7,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import 'swiper/swiper-bundle.css';
+
 // import required modules
 import { Navigation } from "swiper";
 //linking style and image
@@ -50,7 +52,7 @@ const HotDeals = () => {
         <div className='my-12'>
             <div className={commonStyle.hotDealsCon}>
                 {/* filtering section  */}
-                <div className={`flex items-center justify-between ${styles.serchingElement}`}>
+                <div className={`flex flex-col md:flex-row gap-y-5 md:gap-y-0 md:items-center justify-between ${styles.serchingElement}`}>
                     <h1>Hot Deals</h1>
                     <div className='flex items-center gap-x-5'>
                         <button className='drop-shadow-2xl'>All</button>
@@ -63,11 +65,22 @@ const HotDeals = () => {
 
                 {/* slider section with hot deals elementn */}
                 <Swiper
-                    slidesPerView={2}
+                    // slidesPerView={2}
                     spaceBetween={30}
                     navigation={true}
                     modules={[Navigation]}
                     className="mySwiper"
+                    breakpoints={{
+                        // For small devices like mobile phones
+                        480: {
+                          slidesPerView: 1,
+                        },
+                        // For tablets
+                        768: {
+                          slidesPerView: 2,
+                        },
+                       
+                      }}
                 >
                     {
                         allData.map((data, index) => {

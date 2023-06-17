@@ -6,6 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import 'swiper/swiper-bundle.css';
+
 // import required modules
 import { Navigation } from "swiper";
 
@@ -20,11 +22,22 @@ const OfferSlider = () => {
     return (
         <>
             <Swiper
-                slidesPerView={2}
+                // slidesPerView={2}
                 spaceBetween={30}
                 navigation={true}
                 modules={[Navigation]}
-                className="mySwiper"                
+                className="mySwiper"   
+                breakpoints={{
+                    // For small devices like mobile phones
+                    480: {
+                      slidesPerView: 1,
+                    },
+                    // For tablets
+                    768: {
+                      slidesPerView: 2,
+                    },
+                   
+                  }}             
             >
                 <SwiperSlide>
                     <Image src={payInCash} alt="img" height={500} width={500} />

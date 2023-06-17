@@ -10,6 +10,7 @@ import { BsFillPersonFill } from 'react-icons/bs'
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 const RoomDetails = ({ room }) => {
+    console.log(window)
     const { name, type, person, adult, capacity, extraBed, guest, isSmoke, Characteristics, size,
         view, media, bedroom, food, others, images, discount, prevRate, currentRate } = room
     return (

@@ -92,3 +92,20 @@
     color: rgb(28, 60, 107);
     font-weight: 500;
 }
+
+/* @media screen and (max-width:992px) {
+    .serchingElement h1 {
+        font-size: 1.2rem;
+    }
+    
+} */
+
+/* @media screen and (max-width:767px) {
+    .title {
+        font-size: 20px;
+    }
+    .title::after, .title::before {
+        width: 15%;
+    }
+
+} */

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Navbar from '../components/Navbar';
 import bannerStyling from '../styles/banner.module.css'
 import styles from '../styles/flight.module.css'
+import commonStyle from '../styles/common.module.css'
 import { MdWatchLater } from 'react-icons/md'
 import { IoIosContact } from 'react-icons/io'
 import { RiMessengerLine } from 'react-icons/ri'
@@ -116,7 +117,7 @@ const Flight = () => {
 
     return (
         <div>
-            <Navbar isNavbar={false} />
+            <Navbar prop={{ isNavbar: false }} />
             <div className={`bg-white py-6`}>
                 <div className={`${styles.flightContainer}`}>
                     {/* city filtering */}
@@ -136,7 +137,7 @@ const Flight = () => {
                     </div>
 
                     {/* main  content here */}
-                    <div className={`grid gap-x-5 grid-cols-5 mb-[2rem] ${bannerStyling.flightContent}`}>
+                    <div className={`grid gap-y-5 gap-x-3 md:gap-x-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-5  mb-[2rem] ${bannerStyling.flightContent}`}>
                         <div className={`${bannerStyling.tourContent} ${bannerStyling.hotelContent}`}>
                             <label htmlFor='tour'>FROM</label>
                             <select id='tour'>
@@ -196,34 +197,42 @@ const Flight = () => {
                     </div>
                 </div>
             </div>
-            <div className={`mt-8 bg-white max-w-[1112px] mx-auto py-4 rounded shadow-lg`}>
-                <FlightFilter/>
+            <div className={`hidden lg:block mt-8 bg-white max-w-[1112px] mx-auto py-4 rounded shadow-lg`}>
+                <FlightFilter />
             </div>
-            <div className={`flex gap-x-8 ${styles.flightContainer}`}>
-                <div className='w-full'>
-                    <div className='flex justify-between items-center bg-white py-4 px-8 rounded shadow-lg'>
-                        <div className='border-r-2'>
+            <div className={`${commonStyle.container} `}>
+                <div className='flex gap-3 flex-col-reverse lg:flex-row justify-between  lg:mt-8'>
+                    <div className='flex justify-between items-center bg-white py-4 px-8 rounded shadow-lg lg:w-4/5'>
+                        <div>
                             <h2 className='text-[16px] font-bold text-[#1c3c6b]'>Cheapest</h2>
                             <p className='text-[12px] mt-1 text-[rgb(93,105,116]'>Showing the cheapest flights in ascending order</p>
                         </div>
-                        <hr />
                         <div>
 
                             <h2 className='text-[16px] font-bold text-[#1c3c6b]'>Fastest </h2>
                             <p className='text-[12px] mt-1 text-[rgb(93,105,116]'>Click to see the fastest flights in ascending order</p>
                         </div>
                     </div>
+                    <div className='flex gap-x-4 items-center shadow-lg bg-white p-8 rounded lg:w-1/5'>
+                        <MdWatchLater className='text-[30px]' />
+                        <p className='text-[24px] font-bold text-[#1c3c6b]'>18: 50</p>
+                    </div>
+                </div>
+
+            </div>
+            <div className={`flex flex-col lg:flex-row gap-8 ${styles.flightContainer}`}>
+                <div className='w-full'>
                     {/* show data here  */}
                     <div className="container mx-auto">
                         <FlightCard allFlight={allFlight} />
                     </div>
 
                 </div>
-                <div className={`w-[257px]`}>
-                    <div className='flex gap-x-4 items-center shadow-lg bg-white p-8 rounded mb-8'>
+                <div className={`w-full lg:w-[257px]`}>
+                    {/* <div className='flex gap-x-4 items-center shadow-lg bg-white p-8 rounded mb-8'>
                         <MdWatchLater className='text-[30px]' />
                         <p className='text-[24px] font-bold text-[#1c3c6b]'>18: 50</p>
-                    </div>
+                    </div> */}
                     {/* need help section  */}
                     <div className="bg-white shadow-lg rounded-t-lg">
                         <h3 className='bg-[#0b74a7] p-3 text-white font-bold text-[16px] rounded-t-lg'>Need Help ?</h3>

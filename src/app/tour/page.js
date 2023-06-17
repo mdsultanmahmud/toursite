@@ -113,7 +113,7 @@ const Tour = () => {
     ]
     return (
         <div>
-            <Navbar isNavbar={false} />
+            <Navbar prop={{isNavbar: false}} />
             <div className='bg-white py-6 mt-16'>
                 <div className={`${commonStyles.container}`}>
                     <div className='flex gap-x-8 items-center'>

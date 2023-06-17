@@ -20,7 +20,7 @@ const Banner = ({ searchingProps }) => {
                 <div className={`${styles.bannerContent} drop-shadow-2xl bg-white p-4 rounded-xl`}>
                     {/* category filtering  */}
                     <div className={`${styles.catItemContainer} drop-shadow-2xl bg-white rounded-xl`}>
-                        <div className={`flex items-center gap-x-[80px]`}>
+                        <div className={`flex items-center gap-x-[25px] md:gap-x-[35px] lg:gap-x-[80px] `}>
                             <div onClick={() => setSearch("flight")} className={`${styles.itemContainer} ${search == 'flight' ? styles.activeTab : ''}`}>
                                 <Image src={flight} alt='icon of flight' width={30} height={20} />
                                 <p>Flight</p>

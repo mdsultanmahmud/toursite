@@ -35,7 +35,7 @@ const Navbar = ({ prop }) => {
                 <div>
                     <Link href={"/"}><Image src={logo} alt='Logo of the website' width={130} height={40} /></Link>
                 </div>
-                <div className={`flex items-center gap-12 ${shownav || !isNavbar ? 'block' : 'hidden'}`}>
+                <div className={`hidden lg:flex items-center gap-12  ${shownav || !isNavbar ? 'flex' : 'hidden'}`}>
                     <Link href={'/'}>
                         <div onClick={() => setSearch("flight")} className={`${styles.itemContainer} ${search == 'flight' ? styles.activeTab : ''}`}>
                             <Image src={flight} alt='icon of flight' width={30} height={20} />

@@ -39,6 +39,7 @@ const HotelCard = ({ hotel }) => {
                                 <h3 className='text-[20px] font-bold '>BDT {currentRate}</h3>
                                 <p className='text-[12px] mt-1'>for 1 Night, per room</p>
                             </div>
+                            
                         </div>
                     </div>
                 </div>

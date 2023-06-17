@@ -64,11 +64,24 @@ return (
             {/* popular hotel  */}
             <div>
                 <Swiper
-                    slidesPerView={4}
                     spaceBetween={30}
                     navigation={true}
                     modules={[Navigation]}
                     className="mySwiper"
+                    breakpoints={{
+                        // For small devices like mobile phones
+                        480: {
+                          slidesPerView: 1,
+                        },
+                        // For tablets
+                        768: {
+                          slidesPerView: 2,
+                        },
+                        // Default for larger screens
+                        1112: {
+                          slidesPerView: 4,
+                        },
+                      }}
                 >
                     {
                         popularHotel.map((hotel, index) => {

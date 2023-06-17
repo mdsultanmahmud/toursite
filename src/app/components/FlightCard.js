@@ -15,30 +15,32 @@ const FlightCard = ({ allFlight }) => {
     return (
         <div >
             {allFlight.map((item, index) => (
-                <div key={index} className='bg-white drop-shadow-lg rounded-lg my-8'>
-                    <div className='flex justify-between border-b-2 border-[#1c3c6b]'>
-                        {/* name part  */}
-                        <div className='flex items-center gap-x-2 p-4'>
-                            <Image src={item.img} alt='flight img' width={40} height={50} />
-                            <p className='text-[14px] text-[#1c3c6b]'>{item.name}</p>
-                        </div>
-                        {/* time duration part  */}
-                        <div className='flex items-center gap-x-8 py-4'>
-                            <div>
-                                <p className='text-[18px] text-[#1c3c6b] font-bold'>{item.dac}</p>
-                                <p className='text-[14px] text-gray-600'>DAC</p>
+                <div key={index} className='bg-white drop-shadow-lg rounded-lg mb-8'>
+                    <div className='flex flex-col lg:flex-row justify-between border-b-2 border-[#1c3c6b]'>
+                        <div className='flex justify-between p-4 lg:p-0'>
+                            {/* name part  */}
+                            <div className='flex items-center gap-x-2 p-4'>
+                                <Image src={item.img} alt='flight img' width={40} height={50} />
+                                <p className='text-[14px] text-[#1c3c6b]'>{item.name}</p>
                             </div>
-                            <div>
-                                <p className='text-[12px] border-b-2 border-[#1c3c6b] px-2'>{item.type}</p>
-                                <hr />
+                            {/* time duration part  */}
+                            <div className='flex items-center gap-x-8 py-4'>
+                                <div>
+                                    <p className='text-[18px] text-[#1c3c6b] font-bold'>{item.dac}</p>
+                                    <p className='text-[14px] text-gray-600'>DAC</p>
+                                </div>
+                                <div>
+                                    <p className='text-[12px] border-b-2 border-[#1c3c6b] px-2'>{item.type}</p>
+                                    <hr />
 
-                            </div>
-                            <div>
-                                <p className='text-[18px] text-[#1c3c6b] font-bold'>{item.cxb}</p>
-                                <p className='text-[14px] text-gray-600'>CXB</p>
-                            </div>
-                            <div>
-                                <p>{item.timeDuration}</p>
+                                </div>
+                                <div>
+                                    <p className='text-[18px] text-[#1c3c6b] font-bold'>{item.cxb}</p>
+                                    <p className='text-[14px] text-gray-600'>CXB</p>
+                                </div>
+                                <div>
+                                    <p>{item.timeDuration}</p>
+                                </div>
                             </div>
                         </div>
                         <div className='bg-[#ecf3fe] p-4'>
@@ -74,7 +76,7 @@ const FlightCard = ({ allFlight }) => {
                     {/* flight details  */}
                     {activeIndex === index && (
                         <div className="border-t-2 border-[#1c3c6b]">
-                            <div className='grid  grid-cols-2'>
+                            <div className='grid  grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-0'>
                                 <div className="border-r-2 border-[#1c3c6b] p-4">
                                     <h2 className={`${styles.title}`}>Flight Details</h2>
                                     <button className={`${styles.detailsBtn}`}>DAC-CXB</button>
@@ -146,7 +148,7 @@ const FlightCard = ({ allFlight }) => {
                                             <p>{item.details.Policy.Cancellation}</p>
                                             <p>{item.details.Policy.ReIssue}</p>
                                             <h5>Re-issue</h5>
-                                            <hr/>
+                                            <hr />
                                             <p>{item.details.Policy.ReIssue}</p>
                                             <p className='mb-5'>{item.details.Policy.statment}</p>
                                         </div>

@@ -26,7 +26,7 @@ const SearchFlight = ({ search }) => {
             </div>
 
             {/* main  content here */}
-            <div className={`grid gap-x-5 grid-cols-4 mb-[2rem] ${styles.flightContent}`}>
+            <div className={`grid gap-y-5 gap-x-3 md:gap-x-5 grid-cols-2 lg:grid-cols-4 mb-[2rem] ${styles.flightContent}`}>
                 <div className={`${styles.tourContent} ${styles.hotelContent}`}>
                     <label htmlFor='tour'>FROM</label>
                     <select id='tour'>

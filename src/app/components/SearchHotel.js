@@ -5,7 +5,7 @@ import Link from 'next/link';
 const SearchHotel = ({ search }) => {
     return (
         <div className={`${search == 'hotel' ? 'block' : 'hidden'}`}>
-            <div className={`grid gap-x-5 grid-cols-4 mt-[2rem]`}>
+            <div className={`grid gap-y-5 gap-x-3 md:gap-x-5 grid-cols-2 lg:grid-cols-4 mt-[2rem]`}>
                 <div className={`${styles.tourContent} ${styles.hotelContent}`}>
                     <label htmlFor='tour'>CITY/HOTEL/RESORT/AREA</label>
                     <select id='tour'>
@@ -37,7 +37,7 @@ const SearchHotel = ({ search }) => {
                     <p>2 Adults</p>
                 </div>
             </div>
-            <div className={`flex gap-x-8 items-center ${styles.selectionContainer}`}>
+            <div className={`flex gap-4 md:gap-x-8 items-center flex-wrap ${styles.selectionContainer}`}>
                 <h4>Search For</h4>
                 <div>
                     <input id='business' type='checkbox' />
