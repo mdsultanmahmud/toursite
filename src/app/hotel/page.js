@@ -113,8 +113,7 @@ const Hotel = () => {
             {/* main section starts here  */}
             <div className={`py-4 ${commonStyles.container} flex flex-col-reverse lg:flex-row gap-x-8`}>
                 <button onClick={() => setFilter(true)} className='px-6 py-2 lg:hidden z-50 rounded bg-[#fccd03] fixed left-1/2 bottom-24 -translate-x-1/2 flex items-center gap-x-3'><FaFilter /> <span>Filter</span></button>
-                {filter &&
-                    <div className={`${styles.hotelFilterCon} drop-shadow-lg rounded lg:block relative`}>
+                    <div className={`${styles.hotelFilterCon} drop-shadow-lg rounded hidden  lg:block relative ${filter ? styles.activeFilter : styles.removeFilter}`}>
                         <button onClick={() => setFilter(false)} className='p-4 lg:hidden absolute top-1 right1'><ImCross/></button>
                         <div className={`${styles.filterOption} flex justify-between items-center`}>
                             <h2>Filter</h2>
@@ -389,9 +388,8 @@ const Hotel = () => {
                                 </div>
                             </div>
                         </div>
-                        <button onClick={() => setFilter(false)} className={`${styles.filterBtn}`}>Reset All Filters</button>
+                        <button onClick={() => setFilter(false)} className={`${styles.filterBtn} lg:hidden`}>Reset All Filters</button>
                     </div>
-                }
                 <div className={`${styles.hotelSearchCon} ${commonStyles.container} w-full`}>
                     <div className={`flex justify-between items-center`}>
                         <h2 className='text-[16px] font-bold'>43 properties found</h2>

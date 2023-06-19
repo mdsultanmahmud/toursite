@@ -4,13 +4,19 @@ import logo from '../../../public/logo.svg'
 import flight from '../../../public/flight-icon.svg'
 import hotel from '../../../public/hotel-icon.svg'
 import tour from '../../../public/tour-icon.svg'
-import bdt from '../../../public/bdt.svg'
+import bdt from '../../../public/bgFlag.jpg'
+import pak from '../../../public/pakistan.png'
 import Image from 'next/image';
+import { FcCheckmark } from 'react-icons/fc'
 import { IoIosArrowDown } from 'react-icons/io'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
 const Navbar = ({ prop }) => {
     const [shownav, setShowNav] = useState(false)
+    const [selectedCoun, setSelectedCoun] = useState({
+        url: bdt,
+        text: "BDT"
+    })
     const { search, setSearch, isNavbar } = prop
     useEffect(() => {
         const handleScroll = () => {
@@ -57,14 +63,30 @@ const Navbar = ({ prop }) => {
                 </div>
                 <div className='flex items-center gap-3'>
                     <div class="dropdown dropdown-end">
-                        <label tabindex="0" class="m-1 flex items-center gap-1">
-                            <Image src={bdt} alt='image of bdt' width={24} height={24} />
-                            <span>BDT</span>
+                        <label tabindex="0" class="m-1 flex items-center gap-1 cursor-pointer">
+                            <Image src={selectedCoun.url} alt='image of bdt' width={24} height={24} className='founed-full' />
+                            <span>{selectedCoun.text}</span>
                             <IoIosArrowDown />
                         </label>
                         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><a>Item 1</a></li>
-                            <li><a>Item 2</a></li>
+                            <li><a onClick={() => setSelectedCoun({
+                                url: bdt,
+                                text: "BDT"
+                            })} className='flex gap-x-2 items-center'>
+                                <Image src={bdt} alt='image of bdt' width={44} height={44} />
+                                <p>Bangladesh</p>
+                                <FcCheckmark size={22} />
+                            </a></li>
+                            <li>
+                                <a onClick={() => setSelectedCoun({
+                                    url: pak,
+                                    text: "PAK"
+                                })} className='flex gap-x-2 items-center'>
+                                    <Image src={pak} alt='image of bdt' width={44} height={44} />
+                                    <p>Pakistan</p>
+                                    <FcCheckmark size={22} />
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <Link href={"/account/signin"} className='hidden lg:block'><button className={styles.btn}>Sign In</button></Link>

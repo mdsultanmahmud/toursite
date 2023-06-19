@@ -181,6 +181,12 @@
     .hotelSearchCon {
         width: 100%;
     }
+    .activeFilter{
+        display: block !important;
+    }
+    .removeFilter{
+        display: none !important;
+    }
 }
 
 .filterBtn{
