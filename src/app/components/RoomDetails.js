@@ -14,7 +14,7 @@ const RoomDetails = ({ room }) => {
     const { name, type, person, adult, capacity, extraBed, guest, isSmoke, Characteristics, size,
         view, media, bedroom, food, others, images, discount, prevRate, currentRate } = room
     return (
-        <div className='grid grid-cols-2 bg-white drop-shadow-lg p-3 rouned mb-8'>
+        <div className='grid grid-cols-1 lg:grid-cols-2 bg-white drop-shadow-lg p-3 rouned mb-8'>
             <div className='p-4 border-r-2'>
                 <div>
                     <div>

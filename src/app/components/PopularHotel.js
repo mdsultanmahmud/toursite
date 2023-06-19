@@ -77,6 +77,7 @@ const PopularHotel = ({search}) => {
                         navigation={true}
                         modules={[Navigation]}
                         className="mySwiper"
+                        spaceBetween={30}
                         breakpoints={{
                             // For small devices like mobile phones
                             480: {

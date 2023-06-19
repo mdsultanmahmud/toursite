@@ -67,7 +67,7 @@ const Navbar = ({ prop }) => {
                             <li><a>Item 2</a></li>
                         </ul>
                     </div>
-                    <Link href={"/account/signin"}><button className={styles.btn}>Sign In</button></Link>
+                    <Link href={"/account/signin"} className='hidden lg:block'><button className={styles.btn}>Sign In</button></Link>
                 </div>
             </nav>
         </div>

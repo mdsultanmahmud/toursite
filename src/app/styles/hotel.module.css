@@ -9,6 +9,20 @@
     width: calc(100% - 266px);
 }
 
+@media screen and (max-width:992px) {
+    .hotelSearchCon {
+        width: 100%;
+       
+    }
+    .hotelFilterCon {
+        width: 100%;
+        position: fixed;
+        bottom: 2%;
+        left: 0;
+        z-index: 51;
+    }
+    
+}
 .filterOption h2 {
     color: rgb(58, 72, 86);
     font-size: 18px;
@@ -112,6 +126,7 @@
     letter-spacing: 0.14px;
     margin: 0.3rem 0;
 }
+
 .hotelDetails h3{
     font-size: 18px;
     font-weight: 600;
@@ -140,6 +155,11 @@
     width: 100%;
     height: 350px;
 }
+@media screen and (max-width:668px) {
+    .nearbySection iframe{
+        height: 250px;
+    }
+}
 .hotelDetails h6{
     color: #1c3c6b;
     font-size: 14px;
@@ -155,4 +175,20 @@
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width:992px) {
+    .hotelSearchCon {
+        width: 100%;
+    }
+}
+
+.filterBtn{
+    background-color: #fccd03;
+    width: 70%;
+    margin: 2rem auto;
+    padding: 0.5rem 1rem;
+    color: black;
+    font-size: 15px;
+    display: block;
 }

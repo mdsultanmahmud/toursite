@@ -12,9 +12,11 @@ import union from '../../../public/union.svg'
 import tap from '../../../public/tap.svg'
 import Image from 'next/image';
 import { FaFacebookF } from 'react-icons/fa'
-import { AiFillYoutube } from 'react-icons/ai'
+import { AiFillYoutube, AiOutlineHome } from 'react-icons/ai'
 import { BsInstagram } from 'react-icons/bs'
 import footLogo from '../../../public/footerLogo.png'
+import { BsFillPersonFill } from 'react-icons/bs'
+import { BiBookAdd } from 'react-icons/bi'
 const Footer = () => {
     return (
         <footer className={styles.footerContainer}>
@@ -66,10 +68,26 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <hr/>
-                <div className='flex items-center justify-between py-8'>
-                    <Image src={footLogo} alt='footer logo' width={110} height={42}/>
+                <hr className='my-8' />
+                <div className='flex items-center justify-between pb-8'>
+                    <Image src={footLogo} alt='footer logo' width={110} height={42} />
                     <p>© Copyright GoZayaan Ltd.</p>
+                </div>
+                <div className={`${styles.mdFooterContainer} lg:hidden`}>
+                    <div className={`${styles.mdFooter}`}>
+                        <Link href={'/'}>
+                            <AiOutlineHome size={22} className='text-[#1c3c6b]' />
+                            <h1>Home</h1>
+                        </Link>
+                        <Link href={'/'}>
+                            <BiBookAdd size={22} className='text-[#1c3c6b]' />
+                            <h1>Bookings</h1>
+                        </Link>
+                        <Link href={'/'}>
+                            <BsFillPersonFill size={22} className='text-[#1c3c6b]' />
+                            <h1>Account</h1>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </footer>

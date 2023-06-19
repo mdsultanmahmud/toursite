@@ -11,8 +11,10 @@ import { RiMessengerLine } from 'react-icons/ri'
 import BBA from '../../../public/flight/bba.png'
 import FlightCard from '../components/FlightCard';
 import FlightFilter from '../components/FlightFilter';
+import { FaFilter } from 'react-icons/fa';
 const Flight = () => {
     const [way, setWay] = useState("one")
+    const [filter, setFilter] = useState(false)
     const allFlight = [
         {
             name: "Biman Bangladesh Airlines",
@@ -197,9 +199,13 @@ const Flight = () => {
                     </div>
                 </div>
             </div>
-            <div className={`hidden lg:block mt-8 bg-white max-w-[1112px] mx-auto py-4 rounded shadow-lg`}>
-                <FlightFilter />
-            </div>
+            {
+                filter &&
+                <div className={`lg:block mt-8 bg-white max-w-[1112px] mx-auto py-4 rounded shadow-lg`}>
+                    <FlightFilter prop = {{filter, setFilter}}/>
+                </div>
+            }
+            <button onClick={() => setFilter(true)} className='px-6 py-2 lg:hidden z-50 rounded bg-[#fccd03] fixed left-1/2 bottom-24 -translate-x-1/2 flex items-center gap-x-3'><FaFilter /> <span>Filter</span></button>
             <div className={`${commonStyle.container} `}>
                 <div className='flex gap-3 flex-col-reverse lg:flex-row justify-between  lg:mt-8'>
                     <div className='flex justify-between items-center bg-white py-4 px-8 rounded shadow-lg lg:w-4/5'>

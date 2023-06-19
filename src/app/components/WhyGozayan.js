@@ -6,7 +6,7 @@ const WhyGozayan = () => {
     return (
         <div className='my-12'>
             <div className={`${styles.container}`}>
-                <Image className='w-[100%] rounded-2xl' src={whyimg} alt='img of the why gozayaan' width={1000} height={600} />
+                <Image className='w-[100%] rounded-2xl h-[150px]' src={whyimg} alt='img of the why gozayaan' width={1000} height={600} />
             </div>
         </div>
     );

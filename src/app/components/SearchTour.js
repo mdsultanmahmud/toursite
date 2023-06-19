@@ -5,7 +5,7 @@ import Link from 'next/link';
 const SearchTour = ({ search }) => {
     return (
         <div className={`${search == 'tour' ? 'block' : 'hidden'}`}>
-            <div className={`${styles.tourContent} my-[2rem] block`}>
+            <div className={`${styles.tourContent} my-[2rem] block w-full`}>
                 <label htmlFor='tour'>Location/tour</label>
                 <select id='tour'>
                     <option defaultChecked>Cox Bazar</option>

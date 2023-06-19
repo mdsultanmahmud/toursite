@@ -36,3 +36,38 @@
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.mdFooterContainer{
+    background-color: white !important;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9;
+}
+.mdFooter {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+}
+.mdFooter a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 7px;
+}
+.mdFooter  h1 {
+    color: #1c3c6b;
+    font-size: 1.2rem;
+    text-align: center;
+
+}
+@media screen and (max-width:668px) {
+    .mdFooter{  
+        justify-content: space-between;
+        width: 90%;
+    }
+}

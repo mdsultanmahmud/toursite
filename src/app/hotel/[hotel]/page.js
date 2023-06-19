@@ -234,7 +234,7 @@ const HotelDetails = ({ params }) => {
             <Navbar prop={{ isNavbar: false }} />
             <div className={`${commonStyles.container} ${styles.hotelDetails}`}>
                 <Link href="/hotel" className='mb-2 pt-[90px] font-semibold text-[16px] text-[#1c3c6b] flex items-center gap-x-2'><IoIosArrowBack /> <span>See all hotel</span></Link>
-                <div className='flex items-center gap-x-8 mt-12'>
+                <div className='flex flex-col md:flex-row items-center gap-8 mt-12'>
                     <div className={`img-container`}>
                         <div className="carousel w-full">
                             {
@@ -278,7 +278,7 @@ const HotelDetails = ({ params }) => {
                 </div>
                 {/* description of the hotel  */}
                 <div>
-                    <div className='flex items-center gap-x-8 sticky top-[80px] bg-white p-4 z-5'>
+                    <div className='flex items-center gap-x-2 md:gap-x-8 sticky top-[80px] bg-white p-4 z-5'>
                         <button>ROOMS</button>
                         <button>WHAT`&apos;`S NEARBY</button>
                         <button>FACILITIES</button>
@@ -292,9 +292,9 @@ const HotelDetails = ({ params }) => {
                     <div>
                         <p>here check inbox</p>
                     </div>
-                    <div className='flex gap-x-12 mt-4'>
-                        <div >
-                            <div className='flex justify-between items-center bg-[#ecf3fe] rounded-t-lg p-4'>
+                    <div className='lg:flex gap-x-12 mt-4'>
+                        <div className='w-full'>
+                            <div className='hidden lg:flex justify-between items-center bg-[#ecf3fe] rounded-t-lg p-4'>
                                 <h2>Room Details</h2>
                                 <div>
                                     <h2>For 2 Adults, for 1 Night</h2>
@@ -306,18 +306,18 @@ const HotelDetails = ({ params }) => {
                                 }
                             </div>
                         </div>
-                        <div className={`min-w-[300px] bg-[#ecf3fe] drop-shadow-2xl rounded-lg  h-[338px] sticky top-[90px]`}>
+                        <div className={`hidden lg:block min-w-[300px] bg-[#ecf3fe] drop-shadow-2xl rounded-lg  h-[338px] sticky top-[90px]`}>
                                 <h3 className='p-4 bg-[#1c3c6b] text-white font-bold text-[14px] rounded-t-lg'>Summary Pricing</h3>
                                 <p className='text-center mt-8'>Add Rooms to Continue</p>
                                 <button className='px-6 py-2 font-semibold mt-3 rounded-xl text-black text-[12px] bg-[#fccd03] block mx-auto mt-8'>Continue</button>
                         </div>
                     </div>
                     <h2 className='mt-6'>What`&apos;`s Nearby</h2>
-                    <div className={`${styles.nearbySection} rounded flex gap-x-8 p-5 bg-white drop-shadow-lg mb-6`}>
-                        <div className='w-[58%]'>
+                    <div className={`${styles.nearbySection} rounded flex flex-col md:flex-row gap-8 p-5 bg-white drop-shadow-lg mb-6`}>
+                        <div className='w-full md:w-[58%]'>
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29714.70040386337!2d91.9603920724551!3d21.415973343945105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adc96118ced5b5%3A0xfeac4d792191e35e!2sCox&#39;s%20Bazar%20Sea%20Beach!5e0!3m2!1sen!2sbd!4v1686731789911!5m2!1sen!2sbd" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
-                        <div className='w-[40%]'>
+                        <div className='w-full md:w-[40%]'>
                             <h5>Interest Points</h5>
                             <div className='flex items-center gap-x-1 mb-3'>
                                 <MdLocationOn />
@@ -333,7 +333,7 @@ const HotelDetails = ({ params }) => {
                     <h2 className='mt-6'>Facilities</h2>
                     <div className='bg-white p-5 drop-shadow-lg mb-6 rounded'>
                         <h2 className='mt-6'>General</h2>
-                        <div className='grid grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
+                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
                             <div className='flex gap-x-3 items-center'>
                                 <FcCheckmark />
                                 <p>Air Conditioning</p>
@@ -380,7 +380,7 @@ const HotelDetails = ({ params }) => {
                             </div>
                         </div>
                         <h2 className='mt-6'>Media & Technology</h2>
-                        <div className='grid grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
+                        <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
                             <div className='flex gap-x-3 items-center'>
                                 <FcCheckmark />
                                 <p>Mobile Phone Coverage</p>
@@ -391,21 +391,21 @@ const HotelDetails = ({ params }) => {
                             </div>
                         </div>
                         <h2 className='mt-6'>Parking</h2>
-                        <div className='grid grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
+                        <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
                             <div className='flex gap-x-3 items-center'>
                                 <FcCheckmark />
                                 <p>Free Large Vehicle Parking</p>
                             </div>
                         </div>
                         <h2 className='mt-6'>Safety & Security</h2>
-                        <div className='grid grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
+                        <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
                             <div className='flex gap-x-3 items-center'>
                                 <FcCheckmark />
                                 <p>24-Hour Security</p>
                             </div>
                         </div>
                         <h2 className='mt-6'>Services & Extras</h2>
-                        <div className='grid grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
+                        <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-4 mt-4 mb-8'>
                             <div className='flex gap-x-3 items-center'>
                                 <FcCheckmark />
                                 <p>Tours/Ticket Assistance</p>
@@ -414,30 +414,30 @@ const HotelDetails = ({ params }) => {
                     </div>
                     <h2 className='mt-6'>Policy</h2>
                     <div className='bg-white p-5 drop-shadow-lg mb-6 rounded'>
-                        <div className='flex mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <CiViewTimeline />
                                 <p>Check In</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <h6>12:00</h6>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <CiViewTimeline />
                                 <p>Check Out</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <h6>11:00</h6>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <AiTwotoneInsurance />
                                 <p>Instructions</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <ul className='list-disc'>
                                     <li>Extra-person charges may apply and vary depending on property policy</li>
                                     <li>Government-issued photo identification and a credit card, debit card, or cash <br />deposit may be required at check-in for incidental charges</li>
@@ -447,48 +447,48 @@ const HotelDetails = ({ params }) => {
                                 </ul>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <GrDocumentText />
                                 <p>Special Instructions</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <p>
                                     This property offers transfers from the airport (surcharges may apply). Guests must contact the property with arrival details before travel, using the contact information on the booking confirmation. Front desk staff will greet guests on arrival.</p>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <MdChildCare />
                                 <p>Child Policy</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <p className='mb-6'>Allowed</p>
                                 <p>Children under 5 years can stay in one room with their parents complimentary. Extra Bed not available.</p>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <MdOutlinePolicy />
                                 <p>Pet Policy</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <p className='mb-6'>Not Allowed</p>
                                 <p>Children under 5 years can stay in one room with their parents complimentary. Extra Bed not available.</p>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <IoMdInformationCircle />
                                 <p>House Rules</p>
                             </div>
-                            <div className='w-[80%]'>
+                            <div className='w-full md:w-[80%] ml-8 md:ml-0'>
                                 <p className='mb-3'>Not Allowed</p>
                                 <p>For blackout, long holidays and long weekend cancelation policy will not be applicable.Extra bed facilities not available.</p>
                             </div>
                         </div>
-                        <div className='flex  mb-6'>
-                            <div className='flex gap-x-2 w-[20%]'>
+                        <div className='flex flex-col md:flex-row  mb-6'>
+                            <div className='flex gap-x-2 w-full md:w-[20%]'>
                                 <MdOutlinePayment />
                                 <p> Property accepts</p>
                             </div>

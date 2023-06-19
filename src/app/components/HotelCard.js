@@ -9,7 +9,7 @@ const HotelCard = ({ hotel }) => {
     return (
         <div className='my-6'>
             <Link href={`/hotel/${id}`}>
-                <div className="card card-side bg-base-100 shadow-xl ruonded p-3">
+                <div className="card card-side bg-base-100 shadow-xl ruonded p-3 flex flex-col md:flex-row">
                     <Image src={img} alt='img' width={300} height={500} className='rounded-lg' />
                     <div className="card-body">
                         <h2 className="card-title">{name}</h2>
